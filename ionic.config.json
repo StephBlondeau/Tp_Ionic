@@ -1,0 +1,8 @@
+{
+  "name": "starWarsAsso",
+  "app_id": "d619763d",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
