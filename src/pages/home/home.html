@@ -3,10 +3,13 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Movies</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Hello world</h3>
+<ion-content class="card-background-page">
+  <ion-card *ngFor="let movie of listOfMovies">
+    <img class="movie_poster" src="https://image.tmdb.org/t/p/w185{{ movie.poster_path }}" />
+    <div class="card-title">{{ movie.original_title }}</div>
+  </ion-card>
 </ion-content>
