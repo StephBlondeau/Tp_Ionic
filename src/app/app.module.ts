@@ -10,6 +10,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SplashPage } from '../pages/splash/splash';
 
+// Services
+import { themoviedbService } from '../services/themoviedbService.service';
+import { HttpModule } from '@angular/http';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -18,6 +22,7 @@ import { SplashPage } from '../pages/splash/splash';
     SplashPage
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
   ],
@@ -29,6 +34,7 @@ import { SplashPage } from '../pages/splash/splash';
     SplashPage
   ],
   providers: [
+    themoviedbService,
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
