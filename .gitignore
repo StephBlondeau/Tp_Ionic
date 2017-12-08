@@ -16,7 +16,7 @@ log.txt
 .vscode/
 .sass-cache/
 .versions/
-www/build/
+www/
 coverage/
 dist/
 node_modules/
