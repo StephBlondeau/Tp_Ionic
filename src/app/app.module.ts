@@ -1,3 +1,4 @@
+import { MovieDetailsPage } from './../pages/movie-details/movie-details';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -14,6 +15,8 @@ import { SplashPage } from '../pages/splash/splash';
 import { themoviedbService } from '../services/themoviedbService.service';
 import { HttpModule } from '@angular/http';
 
+import { MovieDetailsPageModule } from '../pages/movie-details/movie-details.module';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -24,6 +27,7 @@ import { HttpModule } from '@angular/http';
   imports: [
     HttpModule,
     BrowserModule,
+    MovieDetailsPageModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -31,7 +35,8 @@ import { HttpModule } from '@angular/http';
     MyApp,
     HomePage,
     ListPage,
-    SplashPage
+    SplashPage,
+    MovieDetailsPage
   ],
   providers: [
     themoviedbService,
