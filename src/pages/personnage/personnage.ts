@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import { SwapiService } from './../../services/swapiService.service';
 import { People } from '../../models/people.model';
-import { Personnage } from '../../models/personnage.model';
+import { PeopleDetail } from '../../models/people-detail.model';
 
 /**
  * Generated class for the PersonnagePage page.
@@ -19,7 +19,7 @@ import { Personnage } from '../../models/personnage.model';
 export class PersonnagePage {
 
   people: People;
-  listPersonne: Personnage[]
+  listPeople: PeopleDetail[]
 
 
   constructor(
@@ -34,7 +34,7 @@ export class PersonnagePage {
     this._swapiService.getAllPeople().subscribe(
       (data) =>{ 
         this.people = data;
-        this.listPersonne = data.results;
+        this.listPeople = data.results;
       },
       error => console.log(error));
   }

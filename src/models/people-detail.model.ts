@@ -1,4 +1,4 @@
-export class Personnage {
+export class PeopleDetail {
   name: string;
   height: string;
   mass: string;
@@ -8,5 +8,9 @@ export class Personnage {
   birth_year: string;
   gender: string;
   Birth: string;
+  homeworld: string;
   films: string[];
+  species: string[];
+  vehicles: string[];
+  starships: string[];
 }
