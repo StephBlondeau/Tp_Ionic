@@ -22,7 +22,7 @@ export class HomePage {
 
   initializeItems() {
     this._themoviedbAPI.getAllMovies().subscribe(
-      (data) => this.listOfMovies = data.parts,
+      (data: any) => this.listOfMovies = data.parts,
       error => console.log(error));
   }
 

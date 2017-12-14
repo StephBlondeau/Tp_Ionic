@@ -14,8 +14,28 @@
       <h3>{{ this.selectedMovie.original_title }}</h3>
     </div>
     <div class="movie-rating-stars">
-      <rating [ngModel]="selectedMovie.vote_average" readOnly="true"></rating>
-      <span class="movie-rating-number">4.2</span>
+      <rating [ngModel]="selectedMovie.vote_average / 2" readOnly="true"></rating>
+      <span class="movie-rating-number">{{ selectedMovie.vote_average / 2 }}</span>
+    </div>
+  </div>
+
+  <div class="movie-details-body">
+    <div class="movie-details-info">
+      <span>Duration : 130 minutes</span>
+      <span>Release date : {{ selectedMovie.release_date }}</span>
+    </div>
+    <div class="movie-details-overview">
+      <span class="overview-title">Overview</span>
+      <p>
+        {{ selectedMovie.overview }}
+      </p>
+    </div>
+    <div class="movie-details-actors">
+      <ion-slides class="actor-slider" pager="true" effect="coverflow" slidesPerView="3" spaceBetween="10">
+        <ion-slide *ngFor="let movieCredit of selectedMovieCredits | slice:0:10">
+          <img src="https://image.tmdb.org/t/p/w185{{ movieCredit.profile_path }}">
+        </ion-slide>
+      </ion-slides>
     </div>
   </div>
 </ion-content>

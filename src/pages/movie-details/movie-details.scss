@@ -1,7 +1,11 @@
+@mixin dark-text-style {
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
+}
+
 page-movie-details {
   .movie-details-page {
     background-color: rgba(0, 0, 0, .8);
-    z-index: -1;
     .movie-header {
       width: 100%;
       height: 300px;
@@ -20,23 +24,22 @@ page-movie-details {
         width: 100%;
         bottom: 10%;
         left: 2%;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
         transform: rotate(-8deg);
         padding-right: 5px;
         h3 {
           font-size: 2.2em;
           font-weight: bold;
-          color: #fff;
+          @include dark-text-style;
         }
       }
       .movie-rating-stars {
         position: absolute;
         bottom: 0;
-        right: 5%;
+        right: 3%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        width: 150px;
+        width: 200px;
         ul {
           padding: 0px;
           &.rating li {
@@ -52,8 +55,32 @@ page-movie-details {
       .movie-rating-number {
         padding-left: 5%;
         font-size: 2em;
-        color: #fff;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
+        @include dark-text-style;
+      }
+    }
+    .movie-details-body {
+      .movie-details-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: 1.2em;
+        @include dark-text-style;
+        margin-right: 3%;
+      }
+      .movie-details-overview {
+        margin-top: 5px;
+        padding: 0 8px 0 8px;
+        text-align: justify;
+        @include dark-text-style;
+        .overview-title {
+          font-weight: bold;
+          font-size: 1.5em;
+        }
+      }
+      .movie-details-actors {
+        .actor-slider {
+          max-height: 400px
+        }
       }
     }
   }
