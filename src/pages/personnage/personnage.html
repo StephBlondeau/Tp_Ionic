@@ -9,12 +9,11 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
+    <button ion-item *ngFor="let perso of listPersonne" (click)="itemTapped($event, perso)">
+      <ion-thumbnail item-start>
+<!--       <div class="card-image" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w185'+movie.poster_path+')'}"></div> -->
+      </ion-thumbnail>
+        {{perso.name}}
     </button>
   </ion-list>
   <div *ngIf="selectedItem" padding>

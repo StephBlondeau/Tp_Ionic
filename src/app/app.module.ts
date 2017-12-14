@@ -14,6 +14,7 @@ import { SplashPage } from '../pages/splash/splash';
 
 // Services
 import { themoviedbService } from '../services/themoviedbService.service';
+import { SwapiService } from '../services/swapiService.service';
 import { HttpModule } from '@angular/http';
 
 import { MovieDetailsPageModule } from '../pages/movie-details/movie-details.module';
@@ -43,6 +44,7 @@ import { MovieDetailsPageModule } from '../pages/movie-details/movie-details.mod
   ],
   providers: [
     themoviedbService,
+    SwapiService,
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
