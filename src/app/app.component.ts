@@ -34,13 +34,14 @@ export class MyApp {
   }
 
   initializeApp() {
+    // Initialisation du spla
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
-
-      let splash = this.modalCtrl.create(SplashPage);
-      splash.present();
+      this.splashScreen.hide();
+      // //this.statusBar.styleDefault();
+      // let splash = this.modalCtrl.create(SplashPage);
+      // splash.present();
     });
   }
 
