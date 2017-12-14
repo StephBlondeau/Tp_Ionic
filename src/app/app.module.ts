@@ -5,6 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { PersonnagePage } from '../pages/personnage/personnage';
 import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -23,6 +24,7 @@ import { Ionic2RatingModule } from "ionic2-rating";
   declarations: [
     MyApp,
     HomePage,
+    PersonnagePage,
     ListPage,
     SplashPage
   ],
@@ -37,6 +39,7 @@ import { Ionic2RatingModule } from "ionic2-rating";
   entryComponents: [
     MyApp,
     HomePage,
+    PersonnagePage,
     ListPage,
     SplashPage,
     MovieDetailsPage
