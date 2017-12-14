@@ -33,6 +33,6 @@ export class SplashPage {
 
     setTimeout(() => {
       this.viewCtrl.dismiss();
-    }, 1000); // original time 8000
+    }, 8000); // original time 8000
   }
 }
