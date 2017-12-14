@@ -31,7 +31,7 @@
       </p>
     </div>
     <div class="movie-details-actors">
-      <ion-slides class="actor-slider" pager="true" effect="coverflow" slidesPerView="3" spaceBetween="10">
+      <ion-slides class="actor-slider" pager="true" effect="fade" slidesPerView="2" spaceBetween="10">
         <ion-slide *ngFor="let movieCredit of selectedMovieCredits | slice:0:10">
           <img src="https://image.tmdb.org/t/p/w185{{ movieCredit.profile_path }}">
         </ion-slide>
