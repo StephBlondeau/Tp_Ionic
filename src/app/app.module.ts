@@ -6,7 +6,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PersonnagePage } from '../pages/personnage/personnage';
-import { ListPage } from '../pages/list/list';
+//import { ListPage } from '../pages/list/list';
+import { AssociationPage } from '../pages/association/association';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,8 +24,9 @@ import { MovieDetailsPageModule } from '../pages/movie-details/movie-details.mod
     MyApp,
     HomePage,
     PersonnagePage,
-    ListPage,
-    SplashPage
+    // ListPage,
+    SplashPage,
+    AssociationPage
   ],
   imports: [
     HttpModule,
@@ -37,9 +39,10 @@ import { MovieDetailsPageModule } from '../pages/movie-details/movie-details.mod
     MyApp,
     HomePage,
     PersonnagePage,
-    ListPage,
+    // ListPage,
     SplashPage,
-    MovieDetailsPage
+    MovieDetailsPage,
+    AssociationPage
   ],
   providers: [
     themoviedbService,

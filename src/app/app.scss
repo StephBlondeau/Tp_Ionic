@@ -1,8 +1,33 @@
+$dark: rgba(0, 0, 0, .6);
+
 .toolbar-background {
   background-color: rgba(0, 0, 0, .6);
+  color: rgba(255, 255, 255, .6);
 }
 
 .toolbar-title,
 .bar-button {
   color: rgba(255, 255, 255, .6);
+}
+
+.menu-content {
+   background-color: rgba(255, 255, 255, .6);
+   color: rgba(255, 255, 255, .6);
+}
+
+
+.item {
+  background-color: rgba(0, 0, 0, .6);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dark {
+  background-color: $dark !important;
+  color: #ffffff;
+  .scroll-content {
+    background-color: $dark;
+  }
+  .item {
+    background-color: $dark;
+  }
 }
