@@ -1,14 +1,21 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ this.selectedMovie.original_title }}</ion-title>
+    <ion-title>Movie details</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content>
+<ion-content class="movie-details-page">
   <div class="movie-header">
-
+    <div class="movie-header-background" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w342'+this.selectedMovie.poster_path+')'}"></div>
+    <div class="movie-title">
+      <h3>{{ this.selectedMovie.original_title }}</h3>
+    </div>
+    <div class="movie-rating-stars">
+      <rating [ngModel]="selectedMovie.vote_average" readOnly="true"></rating>
+      <span class="movie-rating-number">4.2</span>
+    </div>
   </div>
 </ion-content>

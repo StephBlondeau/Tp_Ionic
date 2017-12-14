@@ -17,6 +17,8 @@ import { HttpModule } from '@angular/http';
 
 import { MovieDetailsPageModule } from '../pages/movie-details/movie-details.module';
 
+import { Ionic2RatingModule } from "ionic2-rating";
+
 @NgModule({
   declarations: [
     MyApp,
@@ -27,6 +29,7 @@ import { MovieDetailsPageModule } from '../pages/movie-details/movie-details.mod
   imports: [
     HttpModule,
     BrowserModule,
+    Ionic2RatingModule,
     MovieDetailsPageModule,
     IonicModule.forRoot(MyApp),
   ],
