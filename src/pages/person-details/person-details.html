@@ -6,11 +6,12 @@
 
 <ion-content class="person-details-page">
   <div class="person-header">
-    <div class="person-header-background" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w342'+this.selectedMovie.poster_path+')'}"></div>
+    <!--<div class="person-header-background" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w342'+this.selectedMovie.poster_path+')'}"></div>
+    -->
     <div class="person-title">
-      <h3>{{ selectedPerson.name_acteur}}</h3>
+      <h3>{{ selectedPerson.name}}</h3>
     </div>
-    <h3>Character name : {{selectedPerson.name}}</h3>
     <h3>Birth Date : {{selectedPerson.birth_year}}</h3>
+    <h3>Homeworld : {{selectedPerson.homeworld}}</h3>
   </div>
 </ion-content>
