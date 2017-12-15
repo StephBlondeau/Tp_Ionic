@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SwapiService } from './../../services/swapiService.service';
 import { PeopleDetail } from '../../models/people-detail.model';
+import { Homeworld } from '../../models/homeworld.model';
 
 @IonicPage()
 @Component({
@@ -12,6 +13,7 @@ import { PeopleDetail } from '../../models/people-detail.model';
 export class PersonDetailsPage {
 
   selectedPerson : PeopleDetail;
+  selectedHomeWorld : Homeworld;
 
   constructor(
     public navCtrl: NavController,
@@ -23,7 +25,19 @@ export class PersonDetailsPage {
   }
 
   ionViewDidLoad() {
-    //this.getMovieCredits();
+    this.getHomeWorldDetails();
+  }
+
+  getHomeWorldDetails = () => {
+    console.log('Fonction getHomeWorldDetails');
+    this._swapiService.getHomeWorld(this.selectedPerson.homeworld).subscribe(
+      (data: any) => {
+        console.log(data);
+        this.selectedHomeWorld = data;
+        //console.log(this.selectedHomeWorld);
+      },
+      error => console.log(error)
+    );
   }
 
 }
