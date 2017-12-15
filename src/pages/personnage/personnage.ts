@@ -33,18 +33,16 @@ export class PersonnagePage {
 
   initializeItems() {
     this._swapiService.getAllPeople().subscribe(
-      (data) =>{ 
+      (data) => {
         this.people = data;
         this.listPeople = data.results;
       },
       error => console.log(error));
   }
- 
+
 
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!
-    this.navCtrl.push(PersonDetailsPage, {
-      item: item
-    });
+    this.navCtrl.push(PersonDetailsPage, item);
   }
 }
