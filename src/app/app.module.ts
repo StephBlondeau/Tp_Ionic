@@ -6,7 +6,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PersonnagePage } from '../pages/personnage/personnage';
-//import { ListPage } from '../pages/list/list';
 import { AssociationPage } from '../pages/association/association';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -29,15 +28,10 @@ import { PersonDetailsPage } from '../pages/person-details/person-details';
     MyApp,
     HomePage,
     PersonnagePage,
-<<<<<<< HEAD
-    ListPage,
     PersonDetailsPage,
     SplashPage
-=======
-    // ListPage,
     SplashPage,
     AssociationPage
->>>>>>> Modify navigation menu & adding association page
   ],
   imports: [
     HttpModule,
@@ -51,12 +45,7 @@ import { PersonDetailsPage } from '../pages/person-details/person-details';
     MyApp,
     HomePage,
     PersonnagePage,
-<<<<<<< HEAD
-    ListPage,
     PersonDetailsPage,
-=======
-    // ListPage,
->>>>>>> Modify navigation menu & adding association page
     SplashPage,
     MovieDetailsPage,
     AssociationPage
