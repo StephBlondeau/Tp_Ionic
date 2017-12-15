@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
+import { PersonDetailsPage } from '../person-details/person-details';
 import { SwapiService } from './../../services/swapiService.service';
 import { People } from '../../models/people.model';
 import { PeopleDetail } from '../../models/people-detail.model';
@@ -32,18 +33,16 @@ export class PersonnagePage {
 
   initializeItems() {
     this._swapiService.getAllPeople().subscribe(
-      (data) =>{ 
+      (data) => {
         this.people = data;
         this.listPeople = data.results;
       },
       error => console.log(error));
   }
- 
+
 
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!
-    this.navCtrl.push(PersonnagePage, {
-      item: item
-    });
+    this.navCtrl.push(PersonDetailsPage, item);
   }
 }
