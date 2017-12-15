@@ -19,7 +19,6 @@ import { PeopleDetail } from '../../models/people-detail.model';
 })
 export class PersonnagePage {
 
-<<<<<<< HEAD
   people: People;
   listPeople: PeopleDetail[]
 
@@ -29,10 +28,7 @@ export class PersonnagePage {
     public _swapiService: SwapiService) {
 
     this.initializeItems();
-=======
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
->>>>>>> Modify navigation menu & adding association page
+
   }
 
 

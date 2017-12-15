@@ -29,7 +29,6 @@ import { PersonDetailsPage } from '../pages/person-details/person-details';
     HomePage,
     PersonnagePage,
     PersonDetailsPage,
-    SplashPage
     SplashPage,
     AssociationPage
   ],
