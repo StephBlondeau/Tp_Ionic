@@ -1,3 +1,45 @@
 page-person-details {
 
 }
+
+.about-header {
+  background-color: #434954;
+  width: 100%;
+  min-height: 150px;
+  text-align: center;
+}
+
+.about-header img {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.about-info p {
+  color: #697072;
+  text-align: left;
+}
+
+.about-info ion-icon {
+  color: color($colors, primary);
+  width: 20px;
+}
+
+.md,
+.wp {
+  .about-info [text-right] {
+    margin-right: 0;
+  }
+}
+
+.ios .about-info {
+  text-align: center;
+}
+
+.ios .about-info ion-icon {
+  width: auto;
+  margin-right: 10px;
+}
