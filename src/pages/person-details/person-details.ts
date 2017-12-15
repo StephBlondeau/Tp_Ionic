@@ -23,13 +23,7 @@ export class PersonDetailsPage {
   }
 
   ionViewDidLoad() {
-    this.getPersonDetails();
+    //this.getMovieCredits();
   }
 
-  getPersonDetails = () => {
-    this._swapiService.getPersonDetails(this.selectedPerson.id).subscribe(
-      (data: any) => this.selectedPerson = data.cast,
-      error => console.log(error)
-    );
-  }
 }
