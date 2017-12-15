@@ -3,15 +3,24 @@
     <ion-title>Person Details</ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content class="person-details-page">
-  <div class="person-header">
-    <!--<div class="person-header-background" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w342'+this.selectedMovie.poster_path+')'}"></div>
-    -->
-    <div class="person-title">
-      <h3>{{ selectedPerson.name}}</h3>
-    </div>
-    <h3>Birth Date : {{selectedPerson.birth_year}}</h3>
-    <h3>Homeworld : {{selectedHomeWorld?.name}}</h3>
+  <div class="about-header">
+    <img src="../../assets/imgs/bg.jpg" alt="Photo Acteur">
+  </div>
+  <div padding class="about-info">
+    <h4>{{ selectedPerson.name}}</h4>
+    <ion-list no-lines>
+      <ion-item>
+        <ion-icon name="calendar" item-start></ion-icon>
+        <ion-label>Birth Date</ion-label>
+        <ion-label>{{selectedPerson.birth_year}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="planet"  item-start></ion-icon>
+        <ion-label>Location</ion-label>
+        <ion-label>{{selectedHomeWorld?.name}}</ion-label>
+      </ion-item>
+    </ion-list>
   </div>
 </ion-content>
