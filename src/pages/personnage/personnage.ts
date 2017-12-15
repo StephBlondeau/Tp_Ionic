@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
+import { PersonDetailsPage } from '../person-details/person-details';
 import { SwapiService } from './../../services/swapiService.service';
 import { People } from '../../models/people.model';
 import { PeopleDetail } from '../../models/people-detail.model';
@@ -42,7 +43,7 @@ export class PersonnagePage {
 
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!
-    this.navCtrl.push(PersonnagePage, {
+    this.navCtrl.push(PersonDetailsPage, {
       item: item
     });
   }
