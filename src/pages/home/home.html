@@ -10,7 +10,6 @@
 <ion-content class="card-background-page">
   <ion-card *ngFor="let movie of listOfMovies" (click)="navigateToMovieDetails(movie)">
     <div class="card-image" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w185'+movie.poster_path+')'}"></div>
-    <!-- <img class="movie_poster" src="https://image.tmdb.org/t/p/w185{{ movie.poster_path }}" /> -->
     <div class="card-title">
       <div class="title">{{ movie.original_title }}</div>
       <div class="overview">{{ movie.overview }}</div>

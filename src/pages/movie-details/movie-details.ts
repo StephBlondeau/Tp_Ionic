@@ -1,6 +1,8 @@
+import { themoviedbService } from './../../services/themoviedbService.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Movie } from '../../models/movie.model';
+import { MovieCredits } from '../../models/movieCredits.model';
 
 /**
  * Generated class for the MovieDetailsPage page.
@@ -17,14 +19,32 @@ import { Movie } from '../../models/movie.model';
 export class MovieDetailsPage {
 
   selectedMovie: Movie;
+  selectedMovieCredits: MovieCredits;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  // Slider options
+  sliderOptions = {
+    pager: true,
+    effect: "fade",
+    slidesPerView: 3,
+    spaceBetween: 10
+  };
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public _themoviedbService: themoviedbService) {
     this.selectedMovie = this.navParams.data;
     console.log(this.selectedMovie);
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MovieDetailsPage');
+    this.getMovieCredits();
   }
 
+  getMovieCredits = () => {
+    this._themoviedbService.getMovieCredits(this.selectedMovie.id).subscribe(
+      (data: any) => this.selectedMovieCredits = data.cast,
+      error => console.log(error)
+    );
+  }
 }
