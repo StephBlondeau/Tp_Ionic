@@ -21,6 +21,7 @@ import { MovieDetailsPageModule } from '../pages/movie-details/movie-details.mod
 
 import { Ionic2RatingModule } from "ionic2-rating";
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+import { PersonDetailsPage } from '../pages/person-details/person-details';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
     HomePage,
     PersonnagePage,
     ListPage,
+    PersonDetailsPage,
     SplashPage
   ],
   imports: [
@@ -43,6 +45,7 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
     HomePage,
     PersonnagePage,
     ListPage,
+    PersonDetailsPage,
     SplashPage,
     MovieDetailsPage
   ],
