@@ -32,7 +32,7 @@ export class SwapiService {
     public getAllPeople = (): Observable<People> => {
         let callUrl = `${this.actionUrl}${this.PEOPLE_RESSOURCE}`;
 
-        return this._http.get(this.actionUrl)
+        return this._http.get(callUrl)
             .map((response: Response) => response.json() as People)
             .catch(this.handleError);
     }
