@@ -37,6 +37,18 @@ export class SwapiService {
             .catch(this.handleError);
     }
 
+    /**
+     * Get HomeWorld details by url
+     * @return promise
+     */
+    public getHomeWorld = (homeURL: string): Observable<HomeWorld> => {
+        //let callUrl = `${homeURL}`;
+
+        return this._http.get(homeURL)
+            .map((response: Response) => response.json() as HomeWorld)
+            .catch(this.handleError);
+    }
+
     // Function to throw errors
     private handleError(error: Response) {
         return Observable.throw(error);
