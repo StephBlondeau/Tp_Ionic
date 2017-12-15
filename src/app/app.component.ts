@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { PersonnagePage } from '../pages/personnage/personnage';
-// import { ListPage } from '../pages/list/list';
 import { ModalController } from 'ionic-angular/components/modal/modal-controller';
 import { SplashPage } from '../pages/splash/splash';
 import { AssociationPage } from '../pages/association/association';
@@ -31,7 +30,7 @@ export class MyApp {
     this.pages = [
       { title: 'Movies', component: HomePage, icon: "md-videocam" },
       { title: 'Characters', component: PersonnagePage, icon: "md-people" },
-      { title: 'Association', component: AssociationPage, icon: "paper" },
+      { title: 'Association', component: AssociationPage, icon: "clipboard" },
     ];
 
   }

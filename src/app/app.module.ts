@@ -6,7 +6,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PersonnagePage } from '../pages/personnage/personnage';
-//import { ListPage } from '../pages/list/list';
 import { AssociationPage } from '../pages/association/association';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,7 +23,6 @@ import { MovieDetailsPageModule } from '../pages/movie-details/movie-details.mod
     MyApp,
     HomePage,
     PersonnagePage,
-    // ListPage,
     SplashPage,
     AssociationPage
   ],
@@ -39,7 +37,6 @@ import { MovieDetailsPageModule } from '../pages/movie-details/movie-details.mod
     MyApp,
     HomePage,
     PersonnagePage,
-    // ListPage,
     SplashPage,
     MovieDetailsPage,
     AssociationPage
