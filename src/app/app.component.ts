@@ -29,11 +29,9 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      // { title: 'Movies', component: HomePage, icon: "ion-person-stalker" },
-      { title: 'Movies', component: HomePage, icon: "contacts" },
-      { title: 'Characters', component: PersonnagePage, icon: "contacts" },
-      { title: 'Association', component: AssociationPage, icon: "contacts" },
-      // { title: 'Association', component: AssociationPage, icon: "ion-ios-compose" },
+      { title: 'Movies', component: HomePage, icon: "md-videocam" },
+      { title: 'Characters', component: PersonnagePage, icon: "md-people" },
+      { title: 'Association', component: AssociationPage, icon: "paper" },
       // { title: 'List', component: ListPage }
     ];
 
