@@ -32,7 +32,6 @@ export class MyApp {
       { title: 'Movies', component: HomePage, icon: "md-videocam" },
       { title: 'Characters', component: PersonnagePage, icon: "md-people" },
       { title: 'Association', component: AssociationPage, icon: "paper" },
-      // { title: 'List', component: ListPage }
     ];
 
   }
