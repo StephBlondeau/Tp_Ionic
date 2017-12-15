@@ -14,6 +14,7 @@ import { SplashPage } from '../pages/splash/splash';
 
 // Services
 import { themoviedbService } from '../services/themoviedbService.service';
+import { SwapiService } from '../services/swapiService.service';
 import { HttpModule } from '@angular/http';
 
 import { MovieDetailsPageModule } from '../pages/movie-details/movie-details.module';
@@ -47,6 +48,7 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
   ],
   providers: [
     themoviedbService,
+    SwapiService,
     StatusBar,
     SplashScreen,
     YoutubeVideoPlayer,

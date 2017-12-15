@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
+import { SwapiService } from './../../services/swapiService.service';
+import { People } from '../../models/people.model';
+import { PeopleDetail } from '../../models/people-detail.model';
 
 /**
  * Generated class for the PersonnagePage page.
@@ -15,11 +18,32 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PersonnagePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  people: People;
+  listPeople: PeopleDetail[]
+
+
+  constructor(
+    public navCtrl: NavController,
+    public _swapiService: SwapiService) {
+
+    this.initializeItems();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PersonnagePage');
-  }
 
+  initializeItems() {
+    this._swapiService.getAllPeople().subscribe(
+      (data) =>{ 
+        this.people = data;
+        this.listPeople = data.results;
+      },
+      error => console.log(error));
+  }
+ 
+
+  itemTapped(event, item) {
+    // That's right, we're pushing to ourselves!
+    this.navCtrl.push(PersonnagePage, {
+      item: item
+    });
+  }
 }
