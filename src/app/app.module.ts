@@ -14,7 +14,7 @@ import { SplashPage } from '../pages/splash/splash';
 
 // Services
 import { themoviedbService } from '../services/themoviedbService.service';
-import { SwapiService } from '../services/swapiService.service';
+import { SWassocService } from '../services/sw-assocService.service';
 import { HttpModule } from '@angular/http';
 
 import { MovieDetailsPageModule } from '../pages/movie-details/movie-details.module';
@@ -51,7 +51,7 @@ import { PersonDetailsPage } from '../pages/person-details/person-details';
   ],
   providers: [
     themoviedbService,
-    SwapiService,
+    SWassocService,
     StatusBar,
     SplashScreen,
     YoutubeVideoPlayer,

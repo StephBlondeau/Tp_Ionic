@@ -11,13 +11,9 @@
   <ion-list>
     <button ion-item *ngFor="let PeopleD of listPeople" (click)="itemTapped($event, PeopleD)">
       <ion-thumbnail item-start>
-        <img src="img/thumbnail-totoro.png">
-<!--       <div class="card-image" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w185'+movie.poster_path+')'}"></div> -->
+        <img src="{{PeopleD.image}}">
       </ion-thumbnail>
         {{PeopleD.name}}
     </button>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
 </ion-content>

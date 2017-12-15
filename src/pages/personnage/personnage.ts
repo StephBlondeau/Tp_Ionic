@@ -1,9 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, Content } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { IonicPage, NavController } from 'ionic-angular';
 import { PersonDetailsPage } from '../person-details/person-details';
-import { SwapiService } from './../../services/swapiService.service';
+import { SWassocService } from './../../services/sw-assocService.service';
 import { People } from '../../models/people.model';
-import { PeopleDetail } from '../../models/people-detail.model';
 
 /**
  * Generated class for the PersonnagePage page.
@@ -19,35 +18,20 @@ import { PeopleDetail } from '../../models/people-detail.model';
 })
 export class PersonnagePage {
 
-  people: People;
-  listPeople: PeopleDetail[]
+  listPeople: People[];
 
 
   constructor(
     public navCtrl: NavController,
-    public _swapiService: SwapiService) {
+    public _SWassocService: SWassocService) {
 
     this.initializeItems();
 
   }
 
-  @ViewChild(Content)
-  content:Content;
-
-  ngAfterViewInit() {
-    this.content.ionScrollEnd.subscribe((data) => {
-      this._swapiService.getNextPeople(this.people.next).subscribe((data) => {
-        this.people = data;
-        this.listPeople = this.listPeople.concat(data.results);
-      },
-      error => console.log(error));
-    });
-  }
-
   initializeItems() {
-    this._swapiService.getAllPeople().subscribe((data) => {
-        this.people = data;
-        this.listPeople = data.results;
+    this._SWassocService.getAllPeople().subscribe((data) => {
+        this.listPeople = data;
       },
       error => console.log(error));
   }

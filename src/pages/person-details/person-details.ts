@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { SwapiService } from './../../services/swapiService.service';
-import { PeopleDetail } from '../../models/people-detail.model';
-import { Homeworld } from '../../models/homeworld.model';
+import { SWassocService } from '../../services/sw-assocService.service';
+import { People } from '../../models/people.model';
 
 @IonicPage()
 @Component({
@@ -12,32 +11,16 @@ import { Homeworld } from '../../models/homeworld.model';
 
 export class PersonDetailsPage {
 
-  selectedPerson : PeopleDetail;
-  selectedHomeWorld : Homeworld;
+  selectedPerson : People;
+
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public _swapiService: SwapiService) {
+    public _SWassocService: SWassocService) {
 
       this.selectedPerson = this.navParams.data;
-      console.log(this.selectedPerson);
-  }
-
-  ionViewDidLoad() {
-    this.getHomeWorldDetails();
-  }
-
-  getHomeWorldDetails = () => {
-    console.log('Fonction getHomeWorldDetails');
-    this._swapiService.getHomeWorld(this.selectedPerson.homeworld).subscribe(
-      (data: any) => {
-        console.log(data);
-        this.selectedHomeWorld = data;
-        //console.log(this.selectedHomeWorld);
-      },
-      error => console.log(error)
-    );
+      //console.log(this.selectedPerson);
   }
 
 }
