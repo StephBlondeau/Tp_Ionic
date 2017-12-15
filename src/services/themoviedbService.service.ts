@@ -6,6 +6,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import { Observable } from 'rxjs/Observable';
 import { MovieCredits } from '../models/movieCredits.model';
+import { MovieVideos } from '../models/movieVideos.model';
 
 @Injectable()
 export class themoviedbService {
@@ -33,7 +34,7 @@ export class themoviedbService {
 
     /**
      * Get all the star wars movie by id collection
-     * @return promise
+     * @return Observer
      */
     public getAllMovies = (): Observable<Movie> => {
         let callUrl = `${this.actionUrl}${this.COLLECTION_RESSOURCE}${this.STAR_WARS_COLLECTION_ID}?api_key=${this.API_KEY}&language=en-EN`;
@@ -43,8 +44,24 @@ export class themoviedbService {
             .catch(this.handleError);
     }
 
-    public getMovieCredits = (movieID: number): Observable<MovieCredits> => {
+    /**
+     * Get the credits of a movie
+     * @return Observer
+     */
+    public getMovieCredits = (movieID: number): Observable<MovieCredits[]> => {
         let callUrl = `${this.actionUrl}${this.MOVIE_RESSOURCE}${movieID}/credits?api_key=${this.API_KEY}`;
+
+        return this._http.get(callUrl)
+            .map((response: Response) => response.json())
+            .catch(this.handleError);
+    }
+
+    /**
+     * Get the videos of a movie
+     * @return Observer
+     */
+    public getMovieVideos = (movieID: number): Observable<MovieVideos[]> => {
+        let callUrl = `${this.actionUrl}${this.MOVIE_RESSOURCE}${movieID}/videos?api_key=${this.API_KEY}&language=en-EN`;
 
         return this._http.get(callUrl)
             .map((response: Response) => response.json())

@@ -31,11 +31,23 @@
       </p>
     </div>
     <div class="movie-details-actors">
-      <ion-slides class="actor-slider" pager="true" effect="fade" slidesPerView="2" spaceBetween="10">
+      <ion-slides class="actor-slider" pager="true" loop="true" slidesPerView="2" spaceBetween="5">
         <ion-slide *ngFor="let movieCredit of selectedMovieCredits | slice:0:10">
-          <img src="https://image.tmdb.org/t/p/w185{{ movieCredit.profile_path }}">
+          <figure>
+            <img src="https://image.tmdb.org/t/p/w185{{ movieCredit.profile_path }}" />
+            <figcaption>{{ movieCredit.name }}</figcaption>
+          </figure>
         </ion-slide>
       </ion-slides>
+    </div>
+    <div class="movie-trailer">
+      <iframe [src]="updateVideoUrl()" frameborder="0" allowfullscreen width="640" height="550"></iframe>
+    </div>
+    <div class="trailer-watch-on-youtube">
+      <button (click)="watch_on_youtube()" ion-button small color="danger">
+        <ion-icon name="logo-youtube" class="youtube-logo"></ion-icon>
+        Or Watch On Youtube
+      </button>
     </div>
   </div>
 </ion-content>
