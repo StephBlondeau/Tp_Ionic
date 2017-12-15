@@ -1,13 +1,30 @@
 <ion-header>
-  <ion-navbar hideBackButton="false">
-    <button ion-button menuToggle>
-      <ion-icon name='menu'></ion-icon>
+
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Association</ion-title>
-  </ion-navbar>
-<ion-header>
+		<ion-title>Association</ion-title>
+	</ion-navbar>
+</ion-header>
 
 <ion-content>
-  <div class="description">
-  </div>
+	<div class="logo">
+		<img src="../assets/imgs/bg.jpg" alt="Ionic Logo">
+	</div>
+  <form class="formContact" #form="ngForm" (ngSubmit)="sendMail(form)" novalidate>
+    <ion-item>
+      <ion-label>Lastname</ion-label>
+      <ion-input type="text" required [(ngModel)]="contact.lastname" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Firstname</ion-label>
+      <ion-input type="text" required [(ngModel)]="contact.firstname" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Message</ion-label>
+      <ion-textarea [(ngModel)]="contact.message" ngControl="message" [ngModelOptions]="{standalone: true}"></ion-textarea>
+    </ion-item>
+    <button ion-button type="submit" block>Send mail</button>
+  </form>
 </ion-content>
