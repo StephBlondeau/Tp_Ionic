@@ -13,10 +13,12 @@ export class SwapiService {
     protected headers: Headers;
     protected actionUrl: string;
 
+    readonly PEOPLE_RESSOURCE: string = 'people/';
+
 
     constructor(private _http: Http) {
         this.actionUrl =
-            `https://swapi.co/api/people`;
+            `https://swapi.co/api/`;
 
         this.headers = new Headers();
         this.headers.append('Content-Type', 'application/json');
@@ -28,6 +30,8 @@ export class SwapiService {
      * @return promise
      */
     public getAllPeople = (): Observable<People> => {
+        let callUrl = `${this.actionUrl}${this.PEOPLE_RESSOURCE}`;
+
         return this._http.get(this.actionUrl)
             .map((response: Response) => response.json() as People)
             .catch(this.handleError);
