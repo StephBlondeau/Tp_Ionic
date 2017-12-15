@@ -39,6 +39,18 @@ export class SwapiService {
     }
 
     /**
+     * Get next page of People
+     * @return promise
+     */
+    public getNextPeople = (url: string): Observable<People> => {
+        let callUrl = `url`;
+
+        return this._http.get(callUrl)
+            .map((response: Response) => response.json() as People)
+            .catch(this.handleError);
+    }
+
+    /**
      * Get HomeWorld details by url
      * @return promise
      */

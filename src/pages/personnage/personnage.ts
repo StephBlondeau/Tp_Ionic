@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, Content } from 'ionic-angular';
 import { PersonDetailsPage } from '../person-details/person-details';
 import { SwapiService } from './../../services/swapiService.service';
 import { People } from '../../models/people.model';
@@ -31,10 +31,21 @@ export class PersonnagePage {
 
   }
 
+  @ViewChild(Content)
+  content:Content;
+
+  ngAfterViewInit() {
+    this.content.ionScrollEnd.subscribe((data) => {
+      this._swapiService.getNextPeople(this.people.next).subscribe((data) => {
+        this.people = data;
+        this.listPeople = this.listPeople.concat(data.results);
+      },
+      error => console.log(error));
+    });
+  }
 
   initializeItems() {
-    this._swapiService.getAllPeople().subscribe(
-      (data) => {
+    this._swapiService.getAllPeople().subscribe((data) => {
         this.people = data;
         this.listPeople = data.results;
       },
