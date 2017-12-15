@@ -22,6 +22,7 @@ import { MovieDetailsPageModule } from '../pages/movie-details/movie-details.mod
 import { Ionic2RatingModule } from "ionic2-rating";
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { PersonDetailsPage } from '../pages/person-details/person-details';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { PersonDetailsPage } from '../pages/person-details/person-details';
     SWassocService,
     StatusBar,
     SplashScreen,
+    EmailComposer,
     YoutubeVideoPlayer,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
