@@ -7,7 +7,6 @@ export class PeopleDetail {
   eye_color: string;
   birth_year: string;
   gender: string;
-  Birth: string;
   homeworld: string;
   films: string[];
   species: string[];
