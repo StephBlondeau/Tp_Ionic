@@ -5,6 +5,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import { Observable } from 'rxjs/Observable';
 import { People } from '../models/people.model';
+import { Homeworld } from '../models/homeworld.model';
 
 
 @Injectable()
@@ -41,12 +42,11 @@ export class SwapiService {
      * Get HomeWorld details by url
      * @return promise
      */
-    public getHomeWorld = (homeURL: string): Observable<HomeWorld> => {
-        //let callUrl = `${homeURL}`;
-
-        return this._http.get(homeURL)
-            .map((response: Response) => response.json() as HomeWorld)
-            .catch(this.handleError);
+     public getHomeWorld = (homeURL: string): Observable<Homeworld> => {
+      //let callUrl = `${homeURL}`;
+      return this._http.get(homeURL)
+          .map((response: Response) => response.json() as Homeworld)
+          .catch(this.handleError);
     }
 
     // Function to throw errors
