@@ -1,8 +1,42 @@
 .toolbar-background {
   background-color: rgba(0, 0, 0, .6);
+  color: rgba(255, 255, 255, .6);
 }
 
 .toolbar-title,
 .bar-button {
   color: rgba(255, 255, 255, .6);
+}
+
+.menu-button {
+   background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-menu {
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.menu-title {
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.item {
+  color: rgba(255, 255, 255, .6);
+}
+
+ion-header {
+  background-color: rgba(1, 1, 1, 1)
+}
+
+ion-menu {
+  ion-content {
+    ion-list {
+      button {
+        ion-icon {
+          position: relative;
+          top: 0.05em;
+        }
+      }
+    }
+  }
 }

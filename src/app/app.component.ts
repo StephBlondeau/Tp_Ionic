@@ -5,9 +5,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { PersonnagePage } from '../pages/personnage/personnage';
-import { ListPage } from '../pages/list/list';
 import { ModalController } from 'ionic-angular/components/modal/modal-controller';
 import { SplashPage } from '../pages/splash/splash';
+import { AssociationPage } from '../pages/association/association';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,7 +17,7 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{ title: string, component: any }>;
+  pages: Array<{ title: string, component: any, icon: string }>;
 
   constructor(
     public platform: Platform,
@@ -28,9 +28,9 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Character', component: PersonnagePage },
-      { title: 'List', component: ListPage }
+      { title: 'Movies', component: HomePage, icon: "md-videocam" },
+      { title: 'Characters', component: PersonnagePage, icon: "md-people" },
+      { title: 'Association', component: AssociationPage, icon: "clipboard" },
     ];
 
   }
