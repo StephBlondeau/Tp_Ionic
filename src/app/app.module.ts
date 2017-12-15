@@ -19,6 +19,7 @@ import { HttpModule } from '@angular/http';
 import { MovieDetailsPageModule } from '../pages/movie-details/movie-details.module';
 
 import { Ionic2RatingModule } from "ionic2-rating";
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { Ionic2RatingModule } from "ionic2-rating";
     themoviedbService,
     StatusBar,
     SplashScreen,
+    YoutubeVideoPlayer,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
