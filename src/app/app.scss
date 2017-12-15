@@ -1,11 +1,11 @@
 .toolbar-background {
   background-color: rgba(0, 0, 0, .6);
-  color: rgba(255, 255, 255, .6);
+  color: rgba(255, 255, 255, .8);
 }
 
 .toolbar-title,
 .bar-button {
-  color: rgba(255, 255, 255, .6);
+  color: rgba(255, 255, 255, .8);
 }
 
 .menu-button {
@@ -18,10 +18,11 @@
 
 .menu-title {
   background-color: rgba(0, 0, 0, .6);
+  text-align: center;
 }
 
 .item {
-  color: rgba(255, 255, 255, .6);
+  color: rgba(255, 255, 255, .8);
 }
 
 ion-header {

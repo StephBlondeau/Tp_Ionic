@@ -1,9 +1,21 @@
 page-person-details {
-
+  .person-details-page {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .about-info {
+    h4 {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    ion-list {
+      ion-item {
+        background-color: rgba(0, 0, 0, 0);
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
 }
 
 .about-header {
-  background-color: #434954;
   width: 100%;
   min-height: 150px;
   text-align: center;
