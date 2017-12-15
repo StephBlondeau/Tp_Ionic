@@ -1,7 +1,7 @@
-import { Personnage } from './personnage.model';
+import { PeopleDetail } from './people-detail.model';
 
 export class People {
   count: string;
   next: string;
-  results : Personnage[]
+  results : PeopleDetail[]
 }

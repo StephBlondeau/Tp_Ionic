@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { swapiService } from './../../services/swapiService.service';
-import { Personnage } from '../../models/personnage.model';
+import { SwapiService } from './../../services/swapiService.service';
+import { PeopleDetail } from '../../models/people-detail.model';
 
 @IonicPage()
 @Component({
@@ -11,12 +11,12 @@ import { Personnage } from '../../models/personnage.model';
 
 export class PersonDetailsPage {
 
-  selectedPerson : Personnage;
+  selectedPerson : PeopleDetail;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public _swapiService: swapiService) {
+    public _swapiService: SwapiService) {
 
       this.selectedPerson = this.navParams.data;
       console.log(this.selectedPerson);
@@ -27,7 +27,7 @@ export class PersonDetailsPage {
   }
 
   getPersonDetails = () => {
-    this.swapiService.getPersonDetails(this.selectedPerson.id).subscribe(
+    this._swapiService.getPersonDetails(this.selectedPerson.id).subscribe(
       (data: any) => this.selectedPerson = data.cast,
       error => console.log(error)
     );
