@@ -51,15 +51,6 @@ export class MovieDetailsPage {
     this._themoviedbService.getMovieVideos(this.selectedMovie.id).subscribe(
       (data: any) => {
         console.log(data.results);
-        // data.results.every(video => {
-        //   if (video.type == 'Trailer' && video.size >= 720) {
-        //     this.video_id = video.key;
-        //     console.log('Got the key : ', this.video_id);
-        //     return this.video_id;
-
-        //   }
-        // });
-
         for (let video of data.results) {
           if (video.type == 'Trailer' && video.size >= 720) {
             this.video_id = video.key;
