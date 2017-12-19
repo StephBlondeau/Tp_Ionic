@@ -1,4 +1,75 @@
+@mixin dark-text-style {
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
+}
+
 page-person-details {
+  .person-details-page {
+    background-color: rgba(0, 0, 0, .4);
+    .person-header {
+      background-color: rgba(255, 255, 255, .05);
+      color: rgba(255, 255, 255, .9);
+      height: 200px;
+      display: flex;
+      .person-header-background {
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position-x: left;
+        background-position-y: center;
+        height: 100%;
+        width: 225px;
+      }
+      .person-title {
+        padding: 0.4em 0.1em;
+        vertical-align: top;
+        width: 100%;
+        .title {
+          font-size: 1.5em;
+          height: 2em;
+          overflow: hidden;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
+          padding-left: 5%;
+        }
+        .first-person-info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          font-size: 1.2em;
+          @include dark-text-style;
+          margin-left: 5%;
+          span {
+            padding-bottom: 7px;
+          }
+        }
+        .second-person-info {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 1.2em;
+          @include dark-text-style;
+          margin: 5% 5% 0 5%;
+          span {
+            padding-bottom: 7px;
+          }
+        }
+      }
+    }
+    .about-info {
+      margin-top: 15px;
+      padding: 0 8px 0 8px;
+      text-align: justify;
+      @include dark-text-style;
+      .description-title {
+        font-weight: bold;
+        font-size: 1.7em;
+      }
+      p {
+        font-size: 1.2em;
+      }
+    }
+  }
+  /*
   .person-details-page {
     background-color: rgba(0, 0, 0, 0.8);
   }
@@ -54,4 +125,5 @@ page-person-details {
 .ios .about-info ion-icon {
   width: auto;
   margin-right: 10px;
+*/
 }

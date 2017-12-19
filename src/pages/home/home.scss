@@ -30,7 +30,7 @@ page-home {
     }
   }
   .card-background-page {
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .4);
     ion-card {
       background-color: rgba(255, 255, 255, .05);
       color: rgba(255, 255, 255, .9);
@@ -41,7 +41,7 @@ page-home {
       }
       .overview {
         text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
-        color: rgba(255, 255, 255, .7);
+        color: rgba(255, 255, 255, 0.7);
         text-align: justify;
         padding-right: 5px;
       }
