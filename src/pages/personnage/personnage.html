@@ -7,11 +7,19 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="characters-list-body">
+
+  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()" placeholder="Type a name ...">
+  </ion-searchbar>
+
+  <div *ngIf="searching" class="spinner-container">
+    <ion-spinner></ion-spinner>
+  </div>
+
   <ion-list>
-    <button ion-item *ngFor="let PeopleD of listPeople" (click)="itemTapped($event, PeopleD)">
+    <button ion-item *ngFor="let PeopleD of listPeople" (click)="itemTapped($event, PeopleD)" class="characters-item">
       <ion-thumbnail item-start>
-        <img src="{{PeopleD.image}}">
+        <img class="character-image" src="{{PeopleD.image}}">
       </ion-thumbnail>
       {{PeopleD.name}}
     </button>
