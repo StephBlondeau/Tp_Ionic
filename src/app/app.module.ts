@@ -6,9 +6,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { PersonnagePage } from '../pages/personnage/personnage';
-import { AssociationPage } from '../pages/association/association';
-import { ContactPage } from '../pages/contact/contact';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -29,12 +26,7 @@ import { PersonDetailsPageModule } from '../pages/person-details/person-details.
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    PersonnagePage,
-    PersonDetailsPage,
-    SplashPage,
-    AssociationPage,
-    ContactPage
+    HomePage
   ],
   imports: [
     HttpModule,
@@ -50,13 +42,7 @@ import { PersonDetailsPageModule } from '../pages/person-details/person-details.
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    PersonnagePage,
-    PersonDetailsPage,
-    SplashPage,
-    MovieDetailsPage,
-    AssociationPage,
-    ContactPage
+    HomePage
   ],
   providers: [
     themoviedbService,
