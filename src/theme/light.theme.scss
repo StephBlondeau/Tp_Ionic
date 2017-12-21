@@ -97,4 +97,49 @@
       @include light-text-style;
     }
   }
+  .association-page {
+    background-color: rgba($white, 0.945);
+    .association-title {
+      @include light-text-style;
+    }
+    .association-details-overview {
+      @include light-text-style;
+    }
+    a.animated-button:link,
+    a.animated-button:visited {
+      @include light-text-style;
+    }
+    a.animated-button:link:hover,
+    a.animated-button:visited:hover {
+      @include light-text-style;
+    }
+    a.animated-button:link,
+    a.animated-button:visited {
+      @include light-text-style;
+    }
+    a.animated-button.victoria-one {
+      border: 2px solid #59db68;
+    }
+    a.animated-button.victoria-one:after {
+      background: #59db68;
+    }
+    a.animated-button.victoria-two {
+      border: 2px solid #59db68;
+    }
+    a.animated-button.victoria-two:after {
+      background: #59db68;
+    }
+    a.animated-button.victoria-three {
+      border: 2px solid #59db68;
+    }
+    a.animated-button.victoria-three:after {
+      background: #59db68;
+    }
+    a.animated-button.victoria-four {
+      border: 2px solid #59db68;
+    }
+    a.animated-button.victoria-four:after {
+      background: #59db68;
+    }
+  }
 }
