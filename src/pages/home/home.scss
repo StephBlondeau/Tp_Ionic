@@ -25,25 +25,6 @@ page-home {
         font-size: 1.0em;
         height: 5.7em;
         overflow: hidden;
-        color: rgba(0, 0, 0, .6);
-      }
-    }
-  }
-  .card-background-page {
-    background-color: rgba(0, 0, 0, .9);
-    ion-card {
-      background-color: rgba(255, 255, 255, .05);
-      color: rgba(255, 255, 255, .9);
-    }
-    .card-title {
-      .title {
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
-      }
-      .overview {
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
-        color: rgba(255, 255, 255, 0.7);
-        text-align: justify;
-        padding-right: 5px;
       }
     }
   }
@@ -54,31 +35,3 @@ page-home {
     }
   }
 }
-
-
-/*
-page-home {
-  .card-background-page {
-    ion-card {
-      position: relative;
-      text-align: center;
-      height: 200px;
-    }
-    .card-title {
-      position: absolute;
-      top: 7%;
-      font-size: 2.0em;
-      width: 100%;
-      font-weight: bold;
-      color: #fff;
-    }
-    .card-subtitle {
-      font-size: 1.0em;
-      position: absolute;
-      top: 52%;
-      width: 100%;
-      color: #fff;
-    }
-  }
-}
-*/

@@ -1,0 +1,19 @@
+page-contact {
+  .scroll-content {
+    background-color: rgba(0, 0, 0, .8);
+  }
+  ion-content {
+    .formContact {
+      ion-item {
+        background-color: rgba(0, 0, 0, 0);
+        width: 96%;
+      }
+      .button-submit {
+        position: fixed;
+        bottom: 2%;
+        width: 90%;
+        left: 5%;
+      }
+    }
+  }
+}

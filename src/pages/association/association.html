@@ -1,5 +1,4 @@
 <ion-header>
-
 	<ion-navbar>
 		<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -7,24 +6,18 @@
 		<ion-title>Association</ion-title>
 	</ion-navbar>
 </ion-header>
-
-<ion-content>
-	<div class="logo">
-		<img src="../../assets/imgs/icon.png" alt="Ionic Logo">
+<ion-content class="association-page">
+	<div class="association-header">
+		<div class="association-header-background"></div>
+ </div>
+	<div class="association-title">
+		<h3>About us</h3>
+		<hr class="separator">
 	</div>
-  <form class="formContact" #form="ngForm" (ngSubmit)="sendMail(form)" novalidate>
-    <ion-item>
-      <ion-label>Lastname</ion-label>
-      <ion-input type="text" required [(ngModel)]="contact.lastname" [ngModelOptions]="{standalone: true}"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Firstname</ion-label>
-      <ion-input type="text" required [(ngModel)]="contact.firstname" [ngModelOptions]="{standalone: true}"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Message</ion-label>
-      <ion-textarea [(ngModel)]="contact.message" ngControl="message" [ngModelOptions]="{standalone: true}"></ion-textarea>
-    </ion-item>
-    <button ion-button type="submit" block>Send mail</button>
-  </form>
+	<div class="association-details-overview">
+		<p>
+			Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+		</p>
+	</div>
+	<a href="#" class="btn btn-sm animated-button victoria-one" (click)="openPage()">Contact us</a>
 </ion-content>

@@ -1,0 +1,107 @@
+@mixin dark-text-style {
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba($black, .8);
+}
+
+.dark-theme {
+  transition: all 1.1s ease;
+  .toolbar-background {
+    background-color: rgba($black, .6);
+    color: rgba($white, .7);
+  }
+  .toolbar-title,
+  .bar-button {
+    color: rgba($white, .85);
+  }
+  .menu-button {
+    background-color: rgba($black, 0);
+  }
+  .menu-content {
+    .menu-button {
+      color: rgba($white, .85);
+    }
+  }
+  .nav-menu {
+    background-color: rgba($black, .8);
+  }
+  .menu-title {
+    background-color: rgba($black, .6);
+    text-align: center;
+  }
+  ion-header {
+    background-color: rgba(1, 1, 1, 1);
+  }
+  .card-background-page {
+    background-color: rgba($black, .9);
+    ion-card {
+      background-color: rgba($white, .05);
+      color: rgba($white, .9);
+    }
+    .card-title {
+      .title {
+        @include dark-text-style;
+      }
+      .overview {
+        text-shadow: 1px 1px 1px rgba($black, .3);
+        color: rgba($white, 0.7);
+        text-align: justify;
+        padding-right: 5px;
+      }
+    }
+  }
+  .movie-details-page {
+    background-color: rgba($black, .8);
+    .movie-header {
+      .movie-title {
+        h3 {
+          @include dark-text-style;
+        }
+      }
+      .movie-rating-number {
+        @include dark-text-style;
+      }
+    }
+    .movie-details-body {
+      .movie-details-info {
+        @include dark-text-style;
+      }
+      .movie-details-overview {
+        @include dark-text-style;
+      }
+      .movie-details-actors {
+        background-color: rgba($black, .5);
+        box-shadow: inset 0px 11px 8px -10px rgba($black, .5), inset 0px -11px 8px -10px rgba($black, .5);
+        figcaption {
+          @include dark-text-style;
+        }
+      }
+    }
+  }
+  .characters-list-body {
+    background-color: rgba($black, .8);
+    .item {
+      color: rgba($white, .85);
+    }
+  }
+  .person-details-page {
+    background-color: rgba($black, .9);
+    .person-header {
+      background-color: rgba($white, .05);
+      color: rgba($white, .9);
+      .person-title {
+        .title {
+          text-shadow: 1px 1px 1px rgba($black, .8);
+        }
+        .first-person-info {
+          @include dark-text-style;
+        }
+        .second-person-info {
+          @include dark-text-style;
+        }
+      }
+    }
+    .about-info {
+      @include dark-text-style;
+    }
+  }
+}

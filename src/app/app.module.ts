@@ -16,12 +16,14 @@ import { SWassocService } from '../services/sw-assocService.service';
 import { HttpModule } from '@angular/http';
 
 import { MovieDetailsPageModule } from '../pages/movie-details/movie-details.module';
+import { ContactPageModule } from '../pages/contact/contact.module';
 
 import { Ionic2RatingModule } from "ionic2-rating";
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { PersonnagePageModule } from '../pages/personnage/personnage.module';
 import { PersonDetailsPageModule } from '../pages/person-details/person-details.module';
+import { GlobalTheme } from '../services/global-theme.service';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { PersonDetailsPageModule } from '../pages/person-details/person-details.
     PersonDetailsPageModule,
     PersonnagePageModule,
     SplashPageModule,
+    ContactPageModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -47,6 +50,7 @@ import { PersonDetailsPageModule } from '../pages/person-details/person-details.
   providers: [
     themoviedbService,
     SWassocService,
+    GlobalTheme,
     StatusBar,
     SplashScreen,
     EmailComposer,
