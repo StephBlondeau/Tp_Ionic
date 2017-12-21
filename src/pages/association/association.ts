@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import { EmailComposer } from '@ionic-native/email-composer';
+import { Component} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { ContactPage } from '../contact/contact';
 /**
  * Generated class for the AssociationPage page.
  *
@@ -16,38 +15,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AssociationPage {
 
-  contact = {
-    lastname: '',
-    firstname: '',
-    message: ''
-  };
-
-  email = {
-    to: 'stephanie.blondeau@laposte.net',
-    cc: 'stephanie.blondeau@ynov.com',
-    bcc: ['stephanie.blondeau@fobware.com'],
-    subject: 'Cordova Mails',
-    body: 'How are you? Nice greetings from Leipzig',
-    isHtml: true
-  };
-
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams,
-    public emailComposer: EmailComposer
+    public navParams: NavParams
   ) { }
 
-  sendMail(form) {
-    this.emailComposer.addAlias('gmail', 'com.google.android.gm');
-    this.emailComposer.open({
-      app: 'gmail',
-      to: 'stephanie.blondeau@laposte.net',
-      subject: 'Association prise de Contact',
-      body: `Bonjour
-      ${this.contact.message}
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad AssociationPage');
+  }
 
-      ${this.contact.firstname}  ${this.contact.lastname}`,
-      isHtml: true
-    });
+  openPage() {
+      this.navCtrl.push(ContactPage);
   }
 }
