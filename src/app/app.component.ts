@@ -18,7 +18,7 @@ export class MyApp {
 
   rootPage: any = HomePage;
   selectedTheme: String;
-  themeSwitcherIcon: String = '../assets/imgs/rouge.png';
+  themeSwitcherIcon: String = 'assets/imgs/rouge.png';
 
   pages: Array<{ title: string, component: any, icon: string }>;
 
@@ -62,10 +62,10 @@ export class MyApp {
   toggleAppTheme() {
     if (this.selectedTheme === 'dark-theme') {
       this._globalTheme.setActiveTheme('light-theme');
-      this.themeSwitcherIcon = '../assets/imgs/vert.png';
+      this.themeSwitcherIcon = 'assets/imgs/vert.png';
     } else {
       this._globalTheme.setActiveTheme('dark-theme');
-      this.themeSwitcherIcon = '../assets/imgs/rouge.png';
+      this.themeSwitcherIcon = 'assets/imgs/rouge.png';
     }
   }
 }
