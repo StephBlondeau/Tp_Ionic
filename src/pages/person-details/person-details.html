@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Person Details</ion-title>
+    <ion-title>{{ selectedPerson.name }}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -9,7 +9,6 @@
   <div class="person-header">
     <div class="person-header-background" [ngStyle]="{'background-image': 'url('+selectedPerson.image+')'}"></div>
     <div class="person-title">
-      <div class="title">{{ selectedPerson.name }}</div>
       <div class="first-person-info">
         <span>Gender : {{ selectedPerson.gender }}</span>
         <span>Birth : {{ selectedPerson.birth }}</span>

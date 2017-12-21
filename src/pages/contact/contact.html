@@ -22,8 +22,10 @@
     </ion-item>
     <ion-item>
       <ion-label>Message</ion-label>
-      <ion-textarea [(ngModel)]="contact.message" ngControl="message" [ngModelOptions]="{standalone: true}"></ion-textarea>
+      <ion-textarea [attr.rows]=15 [(ngModel)]="contact.message" ngControl="message" [ngModelOptions]="{standalone: true}"></ion-textarea>
     </ion-item>
-    <button ion-button type="submit" block>Send mail</button>
+    <div class="button-submit">
+      <button ion-button type="submit" block>Send mail</button>
+    </div>
   </form>
 </ion-content>

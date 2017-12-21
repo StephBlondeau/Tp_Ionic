@@ -26,13 +26,6 @@ page-person-details {
         padding: 0.4em 0.1em;
         vertical-align: top;
         width: 100%;
-        .title {
-          font-size: 1.5em;
-          height: 2em;
-          overflow: hidden;
-          text-shadow: 1px 1px 1px rgba($black, .8);
-          padding-left: 5%;
-        }
         .first-person-info {
           display: flex;
           flex-direction: column;
