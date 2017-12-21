@@ -8,6 +8,7 @@ import { PersonnagePage } from '../pages/personnage/personnage';
 import { ModalController } from 'ionic-angular/components/modal/modal-controller';
 import { SplashPage } from '../pages/splash/splash';
 import { AssociationPage } from '../pages/association/association';
+import { ContactPage } from '../pages/contact/contact';
 
 @Component({
   templateUrl: 'app.html'

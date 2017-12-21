@@ -7,6 +7,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PersonnagePage } from '../pages/personnage/personnage';
 import { AssociationPage } from '../pages/association/association';
+import { ContactPage } from '../pages/contact/contact';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -31,7 +32,8 @@ import { EmailComposer } from '@ionic-native/email-composer';
     PersonnagePage,
     PersonDetailsPage,
     SplashPage,
-    AssociationPage
+    AssociationPage,
+    ContactPage
   ],
   imports: [
     HttpModule,
@@ -48,7 +50,8 @@ import { EmailComposer } from '@ionic-native/email-composer';
     PersonDetailsPage,
     SplashPage,
     MovieDetailsPage,
-    AssociationPage
+    AssociationPage,
+    ContactPage
   ],
   providers: [
     themoviedbService,
