@@ -1,3 +1,4 @@
+import { GlobalTheme } from './../services/global-theme.service';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -16,6 +17,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
+  selectedTheme: String;
 
   pages: Array<{ title: string, component: any, icon: string }>;
 
@@ -23,7 +25,10 @@ export class MyApp {
     public platform: Platform,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
-    public modalCtrl: ModalController) {
+    public modalCtrl: ModalController,
+    public _globalTheme: GlobalTheme) {
+
+    this._globalTheme.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.initializeApp();
 
     // used for an example of ngFor and navigation

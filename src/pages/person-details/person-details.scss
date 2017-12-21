@@ -1,17 +1,6 @@
-$black: rgb(0, 0, 0);
-$white: rgb(255, 255, 255);
-
-@mixin dark-text-style {
-  color: #fff;
-  text-shadow: 1px 1px 1px rgba($black, .8);
-}
-
 page-person-details {
   .person-details-page {
-    background-color: rgba($black, .9);
     .person-header {
-      background-color: rgba($white, .05);
-      color: rgba($white, .9);
       height: 200px;
       display: flex;
       .person-header-background {
@@ -30,7 +19,6 @@ page-person-details {
           font-size: 1.5em;
           height: 2em;
           overflow: hidden;
-          text-shadow: 1px 1px 1px rgba($black, .8);
           padding-left: 5%;
         }
         .first-person-info {
@@ -38,7 +26,6 @@ page-person-details {
           flex-direction: column;
           align-items: flex-start;
           font-size: 1.2em;
-          @include dark-text-style;
           margin-left: 5%;
           span {
             padding-bottom: 7px;
@@ -50,7 +37,6 @@ page-person-details {
           justify-content: space-between;
           align-items: center;
           font-size: 1.2em;
-          @include dark-text-style;
           margin: 5% 5% 0 5%;
           span {
             padding-bottom: 7px;
@@ -62,7 +48,6 @@ page-person-details {
       margin-top: 15px;
       padding: 0 8px 0 8px;
       text-align: justify;
-      @include dark-text-style;
       .description-title {
         font-weight: bold;
         font-size: 1.7em;

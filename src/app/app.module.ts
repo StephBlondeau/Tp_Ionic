@@ -22,6 +22,7 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { PersonnagePageModule } from '../pages/personnage/personnage.module';
 import { PersonDetailsPageModule } from '../pages/person-details/person-details.module';
+import { GlobalTheme } from '../services/global-theme.service';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { PersonDetailsPageModule } from '../pages/person-details/person-details.
   providers: [
     themoviedbService,
     SWassocService,
+    GlobalTheme,
     StatusBar,
     SplashScreen,
     EmailComposer,
