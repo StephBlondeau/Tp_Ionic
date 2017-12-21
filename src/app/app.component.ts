@@ -18,6 +18,7 @@ export class MyApp {
 
   rootPage: any = HomePage;
   selectedTheme: String;
+  themeSwitcherIcon: String = '../assets/imgs/rouge.png';
 
   pages: Array<{ title: string, component: any, icon: string }>;
 
@@ -56,5 +57,15 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  toggleAppTheme() {
+    if (this.selectedTheme === 'dark-theme') {
+      this._globalTheme.setActiveTheme('light-theme');
+      this.themeSwitcherIcon = '../assets/imgs/vert.png';
+    } else {
+      this._globalTheme.setActiveTheme('dark-theme');
+      this.themeSwitcherIcon = '../assets/imgs/rouge.png';
+    }
   }
 }

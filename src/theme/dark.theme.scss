@@ -20,6 +20,20 @@
     .menu-button {
       color: rgba($white, .85);
     }
+    .item {
+      background-color: transparent;
+      color: rgba($white, .85);
+      ion-thumbnail {
+        min-width: 45px;
+        min-height: 45px;
+        img {
+          max-width: 45px;
+          min-width: 45px;
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
   }
   .nav-menu {
     background-color: rgba($black, .8);

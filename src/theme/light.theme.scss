@@ -17,8 +17,23 @@
   .bar-button {
     color: rgba($black, .7);
   }
-  .menu-button {
-    background-color: rgba($white, 0.945);
+  .menu-content {
+    .menu-button {
+      background-color: rgba($white, 0.945);
+    }
+    .item {
+      background-color: transparent;
+      ion-thumbnail {
+        min-width: 45px;
+        min-height: 45px;
+        img {
+          max-width: 45px;
+          min-width: 45px;
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
   }
   .nav-menu {
     background-color: rgba($white, 0.945);
